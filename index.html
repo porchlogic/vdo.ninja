@@ -1,9 +1,25 @@
 <html lang='en'>
 	<head>
-		<title>Redirecting...</title>
-	    	<script>
-			window.location.href = "https://office.porchlogic.com/?broadcast&mini";
-	    	</script>
+		<script>
+		        // Function to check if URL has specific parameters
+		        function hasQueryParams(url, params) {
+		            return params.every(param => url.searchParams.has(param));
+		        }
+		
+		        document.addEventListener('DOMContentLoaded', function() {
+		            var currentUrl = new URL(window.location.href);
+		
+		            // List the parameters you expect
+		            var requiredParams = ['broadcast', 'mini'];
+		
+		            // Check if the necessary parameters are missing
+		            if (!hasQueryParams(currentUrl, requiredParams)) {
+		                // Redirect only if the required parameters are missing
+		                currentUrl.search += (currentUrl.search ? '&' : '?') + 'broadcast&mini';
+		                window.location.href = currentUrl.href;
+		            }
+		        });
+		    </script>
 		<script type="text/javascript">
 			//  MS Internet Explorer must not be given a chance to fail before I can give the user an error message.
 			try {
