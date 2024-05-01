@@ -4554,9 +4554,9 @@ input:checked + .slider:before {
 
 #promptModal, .customModelPopup, .promptModal {
 	position: absolute;
-	background-color: rgb(221 221 221);
+	background-color: rgb(27, 29, 30);
 	box-shadow: 0 0 30px 10px #0000005c;
-	color: black;
+	color: rgb(9, 115, 65);
 	font-size: 1.0em;
 	top: 50%;
 	left: 50%;
@@ -4616,6 +4616,9 @@ input:checked + .slider:before {
 	position: relative;
 	padding: 1em;
 	width: 100%;
+}
+.promptModal button {
+	color:#aebebe;
 }
 
 .promptModalMessage {
@@ -5360,9 +5363,9 @@ li {
 }
 
 input[type='text'], input[type='password']  {
-	background-color: var(--lighttheme-1);
-	border: 1px solid var(--lighttheme-6);
-	color: var(--lighttheme-text);
+	background-color: var(--discord-grey-3);
+	border: 1px solid var(--discord-grey-6);
+	color: var(--lighttheme-5);
 	border-radius: 4px;
 	padding: 4px;
 	height: 25px;

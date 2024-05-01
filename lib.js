@@ -973,8 +973,8 @@ async function promptAlt(inputText, block = false, asterix = false, value = fals
 						<span id="close_${promptID}" class='modalClose' data-pid="${promptID}">×</span>
 						<span class='promptModalMessage'>${inputText}</span>
 						<input id="input_${promptID}" autocorrect="off" autocapitalize="none" data-pid="${promptID}"  type="${type}" class="largeTextEntry" />
-						<button id="submit_${promptID}" data-pid="${promptID}" style="width:120px; background-color: #fff; position: relative;border: 1px solid #999; margin: 0 0 0 55px;" data-translate='ok'>✔ OK</button>
-						<button id="cancel_${promptID}" data-pid="${promptID}" style="width:120px; background-color: #fff; position: relative;border: 1px solid #999; margin: 0;" data-translate='cancel'>❌ Cancel</button>
+						<button id="submit_${promptID}" data-pid="${promptID}" style="width:120px; background-color: #535D32; position: relative;border: 1px solid #999; margin: 0 0 0 55px;" data-translate='ok'>✔ OK</button>
+						<button id="cancel_${promptID}" data-pid="${promptID}" style="width:120px; background-color: #2A2A2A; position: relative;border: 1px solid #999; margin: 0;" data-translate='cancel'>❌ Cancel</button>
 					</div>
 				</div>
 				<div id="modalBackdrop_${promptID}" class="${backdropClass}" style="z-index:${zindex + 1}"></div>`;
