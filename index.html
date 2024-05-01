@@ -9,14 +9,17 @@
 		        document.addEventListener('DOMContentLoaded', function() {
 		            var currentUrl = new URL(window.location.href);
 		
-		            // List the parameters you expect
+		            // List the parameters you expect for the redirection
 		            var requiredParams = ['broadcast', 'mini'];
 		
-		            // Check if the necessary parameters are missing
-		            if (!hasQueryParams(currentUrl, requiredParams)) {
-		                // Redirect only if the required parameters are missing
-		                currentUrl.search += (currentUrl.search ? '&' : '?') + 'broadcast&mini';
-		                window.location.href = currentUrl.href;
+		            // Check if the "director" parameter is present
+		            if (!currentUrl.searchParams.has('director')) {
+		                // If "director" is not present, then check for other parameters
+		                if (!hasQueryParams(currentUrl, requiredParams)) {
+		                    // Redirect only if the required parameters are missing
+		                    currentUrl.search += (currentUrl.search ? '&' : '?') + 'broadcast&mini';
+		                    window.location.href = currentUrl.href;
+		                }
 		            }
 		        });
 		    </script>
